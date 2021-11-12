@@ -1,15 +1,66 @@
+/* custom properties = propiedades personalizadas */
+:root{
+    --fuenteHeading: 'PT Sans', sans-serif;
+    --fuenteParrafos:'Open Sans', sans-serif;
+    --colorPrimario: #784d3c;
+    --blanco: #fff;
+    --negro: #000;
+}
 html{
+    /* para que 1rem sea igual a 10px */
     font-size: 62.5%;
     /*usarlo siempre no hace que afecte el padding en la caja osea que se ponga mas grande si ya se ah definido un tamaño */
     box-sizing: border-box;
 }
-/* complemento de box-sizing: border-box para aplicarlo a todo */
+/* complemento de box-sizing: border-box para aplicarlo a todo heredando del elemento padre */
 *,*:before,*:after{
     box-sizing: inherit;
 }
 
 body{
-    font-size: 16px;
-    font-family: 'Open Sans', sans-serif;
-    font-family: 'PT Sans', sans-serif;
+    font-family: var(--fuenteParrafos);
+    font-size: 1.6rem;
+    /*interlineado entre los parrafos para que sea mejor ala hora de leer el contenido*/
+    line-height: 2rem;
+}
+/*Globales*/
+.contenedor{
+    max-width: 120rem;
+    width: 90%;
+    /* centrar contenido horizontalmente por que no va a tener display flex */
+    margin: 0 auto;
+}
+a{
+    text-decoration: none;
+}
+h1,h2,h3,h4{
+    font-family: var(--fuenteHeading);
+}
+h1{
+    font-size: 4.8rem;
+}
+h2{
+    font-size: 4rem;
+}
+h3{
+    font-size: 3.2rem;
+}
+h4{
+    font-size: 2.8rem;
+}
+/*se maneja con porcentaje para que sea fluida las imagenes al momento de verlo en cualquier tipo de pantalla*/
+img{
+    max-width: 100%;
+}
+/*Utilidades*/
+/*al llamar esta clase quita el margen que viene por defecto con el navegador, para aplicar margenes propias*/
+.no-margin{
+    margin: 0;
+}
+/*al llamar esta clase quita el padding que viene por defecto con el navegador, para aplicar padding propio*/
+.no-padding{
+    padding: 0;
+}
+.centrar-texto{
+    text-align: center;
 }
