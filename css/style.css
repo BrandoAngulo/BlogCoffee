@@ -1,0 +1,15 @@
+html{
+    font-size: 62.5%;
+    /*usarlo siempre no hace que afecte el padding en la caja osea que se ponga mas grande si ya se ah definido un tamaño */
+    box-sizing: border-box;
+}
+/* complemento de box-sizing: border-box para aplicarlo a todo */
+*,*:before,*:after{
+    box-sizing: inherit;
+}
+
+body{
+    font-size: 16px;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'PT Sans', sans-serif;
+}
