@@ -7,10 +7,10 @@
     --negro: #000;
 }
 html{
-    /* para que 1rem sea igual a 10px */
-    font-size: 62.5%;
     /*usarlo siempre no hace que afecte el padding en la caja osea que se ponga mas grande si ya se ah definido un tamaño */
     box-sizing: border-box;
+    /* para que 1rem sea igual a 10px */
+    font-size: 62.5%;
 }
 /* complemento de box-sizing: border-box para aplicarlo a todo heredando del elemento padre */
 *,*:before,*:after{
@@ -21,7 +21,7 @@ body{
     font-family: var(--fuenteParrafos);
     font-size: 1.6rem;
     /*interlineado entre los parrafos para que sea mejor ala hora de leer el contenido*/
-    line-height: 2rem;
+    line-height: 5rem;
 }
 /*Globales*/
 .contenedor{
@@ -63,4 +63,19 @@ img{
 }
 .centrar-texto{
     text-align: center;
+}
+/* header */
+.header{
+    background-image:url(../img/banner.jpg);
+    height: 40rem;
+    /* para que tome el espacio disponible y no se repita la imagen */
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* posiciona la imagen de fondo donde se debe mostrar dependiendo su posicion= bottom top center left o rigth pero con center center ahi q ponerle background cover para q tome el centro de la imagen*/
+    background-position: center center;
+}
+.header_texto{
+    text-align: center;
+    color: var(--blanco);
+    margin-top: 5rem;
 }
