@@ -3,6 +3,7 @@
     --fuenteHeading: 'PT Sans', sans-serif;
     --fuenteParrafos:'Open Sans', sans-serif;
     --colorPrimario: #784d3c;
+    --gris: #e1e1e1;
     --blanco: #fff;
     --negro: #000;
 }
@@ -125,6 +126,36 @@ color: var(--blanco);
         gap: 4rem;
     }    
 }
+.entrada{
+    /* primero se pasa el ancho el tipo de borde y el color*/
+    border-bottom: 1px solid var(--gris);
+    margin-bottom: 2rem;
+}
+
+/*selecciona una seccion a la que no quiera que se apliquen  estilos de un mismo contenedor*/
+.entrada:last-of-type{
+    border-bottom: none;
+    margin-bottom: none;
+}
+/*Boton*/
 .boton{
-    
+    /*toma todo el espacio disponible*/
+ display: block;   
+ font-family: var(--fuenteHeading);
+ color: var(--blanco);
+ text-align: center;
+ padding: 1rem 2rem;
+ font-size: 1.8rem;
+ text-transform: uppercase;
+ font-weight: 700;
+ margin-bottom: 2rem;
+}
+@media(min-width: 768px){
+    .boton{
+        /*toma el espacio que requiera pero en caso de requerir un margin o un width si se va poder usar*/
+        display: inline-block;
+    }
+}
+.boton--primario{
+    background-color: var(--negro);
 }
