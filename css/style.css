@@ -1,161 +1,195 @@
 /* custom properties = propiedades personalizadas */
-:root{
-    --fuenteHeading: 'PT Sans', sans-serif;
-    --fuenteParrafos:'Open Sans', sans-serif;
-    --colorPrimario: #784d3c;
-    --gris: #e1e1e1;
-    --blanco: #fff;
-    --negro: #000;
+:root {
+  --fuenteHeading: "PT Sans", sans-serif;
+  --fuenteParrafos: "Open Sans", sans-serif;
+  --colorPrimario: #784d3c;
+  --gris: #e1e1e1;
+  --blanco: #fff;
+  --negro: #000;
 }
-html{
-    /*usarlo siempre no hace que afecte el padding en la caja osea que se ponga mas grande si ya se ah definido un tamaño */
-    box-sizing: border-box;
-    /* para que 1rem sea igual a 10px */
-    font-size: 62.5%;
+html {
+  /*usarlo siempre no hace que afecte el padding en la caja osea que se ponga mas grande si ya se ah definido un tamaño */
+  box-sizing: border-box;
+  /* para que 1rem sea igual a 10px */
+  font-size: 62.5%;
 }
 /* complemento de box-sizing: border-box para aplicarlo a todo heredando del elemento padre */
-*,*:before,*:after{
-    box-sizing: inherit;
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
 }
 
-body{
-    font-family: var(--fuenteParrafos);
-    font-size: 1.6rem;
-    /*interlineado entre los parrafos para que sea mejor ala hora de leer el contenido*/
-    line-height: 5rem;
+body {
+  font-family: var(--fuenteParrafos);
+  font-size: 1.6rem;
+  /*interlineado entre los parrafos para que sea mejor ala hora de leer el contenido*/
+  line-height: 5rem;
 }
+
 /*Globales*/
-.contenedor{
-    max-width: 120rem;
-    width: 90%;
-    /* centrar contenido horizontalmente por que no va a tener display flex */
-    margin: 0 auto;
+.contenedor {
+  max-width: 120rem;
+  width: 90%;
+  /* centrar contenido horizontalmente por que no va a tener display flex */
+  margin: 0 auto;
 }
-a{
-    text-decoration: none;
+a {
+  text-decoration: none;
 }
-h1,h2,h3,h4{
-    font-family: var(--fuenteHeading);
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--fuenteHeading);
+  line-height: 3.8rem;
 }
-h1{
-    font-size: 4.8rem;
+h1 {
+  font-size: 4.8rem;
 }
-h2{
-    font-size: 4rem;
+h2 {
+  font-size: 4rem;
 }
-h3{
-    font-size: 3.2rem;
+h3 {
+  font-size: 3.2rem;
 }
-h4{
-    font-size: 2.8rem;
+h4 {
+  font-size: 2.8rem;
 }
 /*se maneja con porcentaje para que sea fluida las imagenes al momento de verlo en cualquier tipo de pantalla*/
-img{
-    max-width: 100%;
+img {
+  max-width: 100%;
 }
 /*Utilidades*/
 /*al llamar esta clase quita el margen que viene por defecto con el navegador, para aplicar margenes propias*/
-.no-margin{
-    margin: 0;
+.no-margin {
+  margin: 0;
 }
 /*al llamar esta clase quita el padding que viene por defecto con el navegador, para aplicar padding propio*/
-.no-padding{
-    padding: 0;
+.no-padding {
+  padding: 0;
 }
-.centrar-texto{
-    text-align: center;
+.centrar-texto {
+  text-align: center;
 }
 /* header */
-.header{
-    background-image:url(../img/banner.jpg);
-    height: 40rem;
-    /* para que tome el espacio disponible y no se repita la imagen */
-    background-size: cover;
-    background-repeat: no-repeat;
-    /* posiciona la imagen de fondo donde se debe mostrar dependiendo su posicion= bottom top center left o rigth pero con center center ahi q ponerle background cover para q tome el centro de la imagen*/
-    background-position: center center;
+.header {
+  background-image: url(../img/banner.jpg);
+  height: 40rem;
+  /* para que tome el espacio disponible y no se repita la imagen */
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* posiciona la imagen de fondo donde se debe mostrar dependiendo su posicion= bottom top center left o rigth pero con center center ahi q ponerle background cover para q tome el centro de la imagen*/
+  background-position: center center;
 }
-.header_texto{
-    text-align: center;
-    color: var(--blanco);
-    margin-top: 5rem;
+.header_texto {
+  text-align: center;
+  color: var(--blanco);
+  margin-top: 5rem;
 }
-@media (min-width: 768px){
-    .header_texto{
-        margin-top: 10rem;
-    }
-}
-
-@media (min-width: 768px ){
-    .barra{
-        display: flex;
-        justify-content: space-between;
-        /* es para alinear verticalmente con flexbox los elementos */
-        align-items: center;
-    }
-}
-.logo{
-    color: var(--blanco);
-}
-.logo__nombre{
-    font-weight: normal;
-}
-.logo__bold{
-    font-weight: bold;
+@media (min-width: 768px) {
+  .header_texto {
+    margin-top: 10rem;
+  }
 }
 
-@media (min-width: 768px){
-    .navegacion{
-        display: flex;
-        column-gap:  2rem;
-    }
+@media (min-width: 768px) {
+  .barra {
+    display: flex;
+    justify-content: space-between;
+    /* es para alinear verticalmente con flexbox los elementos */
+    align-items: center;
+  }
 }
-.navegacion__enlace{
-    /* para acomodar el contenido de arriba hacia abajo */
-display: block;
-text-align: center;
-font-size: 1.8rem;
-color: var(--blanco);
-}    
-
-@media (min-width: 768px){
-    .contenido__principal{
-        display: grid;
-        /* la columna principal toma dos terceras partes y la otra columna toma una tercera parte*/
-        grid-template-columns: 2fr 1fr;
-        gap: 4rem;
-    }    
+.logo {
+  color: var(--blanco);
 }
-.entrada{
-    /* primero se pasa el ancho el tipo de borde y el color*/
-    border-bottom: 1px solid var(--gris);
-    margin-bottom: 2rem;
+.logo__nombre {
+  font-weight: normal;
+}
+.logo__bold {
+  font-weight: bold;
 }
 
-/*selecciona una seccion a la que no quiera que se apliquen  estilos de un mismo contenedor*/
-.entrada:last-of-type{
-    border-bottom: none;
-    margin-bottom: none;
+@media (min-width: 768px) {
+  .navegacion {
+    display: flex;
+    column-gap: 2rem;
+  }
+}
+.navegacion__enlace {
+  /* para acomodar el contenido de arriba hacia abajo */
+  display: block;
+  text-align: center;
+  font-size: 1.8rem;
+  color: var(--blanco);
+}
+
+@media (min-width: 768px) {
+  .contenido__principal {
+    display: grid;
+    /* la columna principal toma dos terceras partes y la otra columna toma una tercera parte*/
+    grid-template-columns: 2fr 1fr;
+    gap: 4rem;
+  }
+}
+.entrada {
+  /* primero se pasa el ancho el tipo de borde y el color*/
+  border-bottom: 1px solid var(--gris);
+  margin-bottom: 2rem;
+}
+
+/*selecciona la ultima seccion a la que no quiera que se apliquen  estilos de un mismo contenedor*/
+.entrada:last-of-type {
+  border-bottom: none;
+  margin-bottom: none;
 }
 /*Boton*/
-.boton{
-    /*toma todo el espacio disponible*/
- display: block;   
- font-family: var(--fuenteHeading);
- color: var(--blanco);
- text-align: center;
- padding: 1rem 2rem;
- font-size: 1.8rem;
- text-transform: uppercase;
- font-weight: 700;
- margin-bottom: 2rem;
+.boton {
+  /*toma todo el espacio disponible*/
+  display: block;
+  font-family: var(--fuenteHeading);
+  color: var(--blanco);
+  text-align: center;
+  padding: 1rem 2rem;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 2rem;
 }
-@media(min-width: 768px){
-    .boton{
-        /*toma el espacio que requiera pero en caso de requerir un margin o un width si se va poder usar*/
-        display: inline-block;
-    }
+@media (min-width: 768px) {
+  .boton {
+    /*toma el espacio que requiera pero en caso de requerir un margin o un width si se va poder usar*/
+    display: inline-block;
+  }
 }
-.boton--primario{
-    background-color: var(--negro);
+/*Botones*/
+.boton--primario {
+  background-color: var(--negro);
+}
+.boton--secundario {
+  background-color: var(--colorPrimario);
+}
+/* lista */
+.widget-curso {
+  border-bottom: 1px solid var(--gris);
+}
+.widget-curso:last-of-type {
+    border-bottom: none;
+    margin-bottom: none;
+  }
+.widget-curso__label {
+    font-family: var(--fuenteHeading);
+  font-weight: 700;
+}
+.widget-curso__info {
+  font-weight: normal;
+}
+.widget-curso__info,
+.widget-curso__label{
+    font-size: 2rem;
+}
+
+.cursos {
+  list-style: none;
 }
