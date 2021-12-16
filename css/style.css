@@ -74,9 +74,19 @@ img {
 .centrar-texto {
   text-align: center;
 }
+
 /* header */
-.header {
+/* NOTA IMPORTANTE apoyarnos de la libreria modernizr para poder cargar webp con CSS*/
+/* Si el explorador soporta webp cargamos la imagen*/
+.webp .header{
+  background-image: url(../img/banner.webp);
+}
+/* si el navegador no soporta webp cargamos la imagen en formato jpg*/
+.no-webp .header{
   background-image: url(../img/banner.jpg);
+}
+
+.header {
   height: 40rem;
   /* para que tome el espacio disponible y no se repita la imagen */
   background-size: cover;
